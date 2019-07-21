@@ -1,0 +1,12 @@
+version: '2'
+services:
+  tarantool:
+    container_name: kvserver
+    image: tarantool/tarantool:2
+    command: tarantool /opt/tarantool/kvapp.lua
+    ports:
+      - 3301:3301
+      - 8080:8080
+    volumes:
+      - f:/tarantool/tarantool_kvstorage:/opt/tarantool
+      - f:/tarantool/tarantool_kvstorage/data:/var/lib/tarantool
