@@ -8,7 +8,7 @@ log = require('log')
 createDB = function()
     dbspace = box.schema.space.create('db')
     log.info('db space created')
-    -- create primary key with two parts: id, time
+    -- create primary key
     dbspace:create_index('primary', {type = 'hash', parts = {1, 'string'}}) 
     log.info('db space primary index created')
 end
