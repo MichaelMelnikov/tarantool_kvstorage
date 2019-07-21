@@ -1,246 +1,70 @@
-2019-07-21 13:25:02.471 [1] main/102/tarantool-entrypoint.lua C> Tarantool 2.2.0-482-g8c84932ad
-2019-07-21 13:25:02.471 [1] main/102/tarantool-entrypoint.lua C> log level 3
-2019-07-21 13:25:02.528 [1] main C> entering the event loop
-2019-07-21 13:25:46.375 [1] main/119/http/172.19.0.1:60100 server.lua:681 E> unhandled error: /usr/local/share/lua/5.1/http/server.lua:392: unsupported Lua type 'function'
-stack traceback:
-	/usr/local/share/lua/5.1/http/server.lua:679: in function 'process_client'
-	/usr/local/share/lua/5.1/http/server.lua:1117: in function </usr/local/share/lua/5.1/http/server.lua:1117>
-	[C]: in function 'pcall'
-	builtin/socket.lua:1073: in function <builtin/socket.lua:1071>
-request:
-GET /kv/peer? HTTP/1.1
-Host: 127.0.0.1:8080
-Content-type: application/json
-
-
-2019-07-21 13:26:13.812 [1] main/122/http/172.19.0.1:60104 kvapp.lua:116 E> GET command with unknown key: test2
-2019-07-21 13:27:15.647 [1] main C> got signal 15 - Terminated
-2019-07-21 13:28:20.754 [1] main/102/tarantool-entrypoint.lua C> Tarantool 2.2.0-482-g8c84932ad
-2019-07-21 13:28:20.754 [1] main/102/tarantool-entrypoint.lua C> log level 5
-2019-07-21 13:28:20.757 [1] main/102/tarantool-entrypoint.lua I> mapping 268435456 bytes for memtx tuple arena...
-2019-07-21 13:28:20.758 [1] main/102/tarantool-entrypoint.lua I> mapping 134217728 bytes for vinyl tuple arena...
-2019-07-21 13:28:20.759 [1] main/102/tarantool-entrypoint.lua I> instance uuid 408619f4-c85d-49f6-812b-d0ddf426083b
-2019-07-21 13:28:20.763 [1] main/102/tarantool-entrypoint.lua I> instance vclock {1: 8}
-2019-07-21 13:28:20.764 [1] iproto/101/main I> binary: bound to 0.0.0.0:3301
-2019-07-21 13:28:20.765 [1] main/102/tarantool-entrypoint.lua I> recovery start
-2019-07-21 13:28:20.766 [1] main/102/tarantool-entrypoint.lua I> recovering from `/var/lib/tarantool/00000000000000000000.snap'
-2019-07-21 13:28:20.767 [1] main/102/tarantool-entrypoint.lua I> cluster uuid 31d1a77f-5cd1-4dee-a19a-d8023ebe656f
-2019-07-21 13:28:20.777 [1] main/102/tarantool-entrypoint.lua I> assigned id 1 to replica 408619f4-c85d-49f6-812b-d0ddf426083b
-2019-07-21 13:28:20.779 [1] main/102/tarantool-entrypoint.lua I> recover from `/var/lib/tarantool/00000000000000000000.xlog'
-2019-07-21 13:28:20.780 [1] main/102/tarantool-entrypoint.lua I> done `/var/lib/tarantool/00000000000000000000.xlog'
-2019-07-21 13:28:20.782 [1] main/102/tarantool-entrypoint.lua I> recover from `/var/lib/tarantool/00000000000000000008.xlog'
-2019-07-21 13:28:20.782 [1] main/102/tarantool-entrypoint.lua I> done `/var/lib/tarantool/00000000000000000008.xlog'
-2019-07-21 13:28:20.790 [1] main/102/tarantool-entrypoint.lua I> ready to accept requests
-2019-07-21 13:28:20.790 [1] main/104/checkpoint_daemon I> scheduled next checkpoint for Sun Jul 21 14:41:48 2019
-2019-07-21 13:28:20.791 [1] main/102/tarantool-entrypoint.lua I> tcp_server: remove dead UNIX socket: /var/run/tarantool/tarantool.sock
-2019-07-21 13:28:20.791 [1] main/115/console/unix/:/var/run/tarantool I> started
-2019-07-21 13:28:20.792 [1] main/102/tarantool-entrypoint.lua F> /opt/tarantool/kvapp.lua:18: invalid option '%n' to 'format'
-2019-07-21 13:29:44.443 [1] main/102/tarantool-entrypoint.lua C> Tarantool 2.2.0-482-g8c84932ad
-2019-07-21 13:29:44.443 [1] main/102/tarantool-entrypoint.lua C> log level 5
-2019-07-21 13:29:44.447 [1] main/102/tarantool-entrypoint.lua I> mapping 268435456 bytes for memtx tuple arena...
-2019-07-21 13:29:44.447 [1] main/102/tarantool-entrypoint.lua I> mapping 134217728 bytes for vinyl tuple arena...
-2019-07-21 13:29:44.448 [1] main/102/tarantool-entrypoint.lua I> instance uuid 408619f4-c85d-49f6-812b-d0ddf426083b
-2019-07-21 13:29:44.452 [1] main/102/tarantool-entrypoint.lua I> instance vclock {1: 9}
-2019-07-21 13:29:44.452 [1] iproto/101/main I> binary: bound to 0.0.0.0:3301
-2019-07-21 13:29:44.454 [1] main/102/tarantool-entrypoint.lua I> recovery start
-2019-07-21 13:29:44.454 [1] main/102/tarantool-entrypoint.lua I> recovering from `/var/lib/tarantool/00000000000000000000.snap'
-2019-07-21 13:29:44.455 [1] main/102/tarantool-entrypoint.lua I> cluster uuid 31d1a77f-5cd1-4dee-a19a-d8023ebe656f
-2019-07-21 13:29:44.465 [1] main/102/tarantool-entrypoint.lua I> assigned id 1 to replica 408619f4-c85d-49f6-812b-d0ddf426083b
-2019-07-21 13:29:44.467 [1] main/102/tarantool-entrypoint.lua I> recover from `/var/lib/tarantool/00000000000000000000.xlog'
-2019-07-21 13:29:44.467 [1] main/102/tarantool-entrypoint.lua I> done `/var/lib/tarantool/00000000000000000000.xlog'
-2019-07-21 13:29:44.469 [1] main/102/tarantool-entrypoint.lua I> recover from `/var/lib/tarantool/00000000000000000008.xlog'
-2019-07-21 13:29:44.469 [1] main/102/tarantool-entrypoint.lua recovery.cc:156 W> file `/var/lib/tarantool/00000000000000000008.xlog` wasn't correctly closed
-2019-07-21 13:29:44.475 [1] main/102/tarantool-entrypoint.lua I> ready to accept requests
-2019-07-21 13:29:44.475 [1] main/104/checkpoint_daemon I> scheduled next checkpoint for Sun Jul 21 14:53:17 2019
-2019-07-21 13:29:44.476 [1] main/102/tarantool-entrypoint.lua I> tcp_server: remove dead UNIX socket: /var/run/tarantool/tarantool.sock
-2019-07-21 13:29:44.476 [1] main/115/console/unix/:/var/run/tarantool I> started
-2019-07-21 13:29:44.482 [1] main/102/tarantool-entrypoint.lua I> db space got 0 records
-2019-07-21 13:29:44.485 [1] main/116/http/0.0.0.0:8080 I> started
-2019-07-21 13:29:44.485 [1] main C> entering the event loop
-2019-07-21 13:29:49.581 [1] main/117/http/172.19.0.1:60106 I> GET /kv/test2
-2019-07-21 13:29:49.581 [1] main/117/http/172.19.0.1:60106 kvapp.lua:116 E> GET command with unknown key: test2
-2019-07-21 13:29:52.974 [1] main/118/http/172.19.0.1:60108 I> GET /kv/
-2019-07-21 13:29:57.607 [1] main/119/http/172.19.0.1:60110 I> GET /kv/peer
-2019-07-21 13:34:25.013 [1] main/129/http/172.19.0.1:60112 I> POST /kv/peer
-2019-07-21 13:34:25.013 [1] main/129/http/172.19.0.1:60112 kvapp.lua:39 E> Unknown REST command (with key - /kv/key): POST
-2019-07-21 13:35:08.904 [1] main/131/http/172.19.0.1:60114 I> POST /kv
-2019-07-21 13:35:08.904 [1] main/131/http/172.19.0.1:60114 kvapp.lua:67 E> POST command with invalid body
-2019-07-21 13:35:36.244 [1] main C> got signal 15 - Terminated
-2019-07-21 13:44:13.664 [1] main/102/tarantool-entrypoint.lua C> Tarantool 2.2.0-482-g8c84932ad
-2019-07-21 13:44:13.664 [1] main/102/tarantool-entrypoint.lua C> log level 5
-2019-07-21 13:44:13.668 [1] main/102/tarantool-entrypoint.lua I> mapping 268435456 bytes for memtx tuple arena...
-2019-07-21 13:44:13.668 [1] main/102/tarantool-entrypoint.lua I> mapping 134217728 bytes for vinyl tuple arena...
-2019-07-21 13:44:13.669 [1] main/102/tarantool-entrypoint.lua I> instance uuid 408619f4-c85d-49f6-812b-d0ddf426083b
-2019-07-21 13:44:13.674 [1] main/102/tarantool-entrypoint.lua I> instance vclock {1: 10}
-2019-07-21 13:44:13.674 [1] iproto/101/main I> binary: bound to 0.0.0.0:3301
-2019-07-21 13:44:13.676 [1] main/102/tarantool-entrypoint.lua I> recovery start
-2019-07-21 13:44:13.676 [1] main/102/tarantool-entrypoint.lua I> recovering from `/var/lib/tarantool/00000000000000000000.snap'
-2019-07-21 13:44:13.677 [1] main/102/tarantool-entrypoint.lua I> cluster uuid 31d1a77f-5cd1-4dee-a19a-d8023ebe656f
-2019-07-21 13:44:13.687 [1] main/102/tarantool-entrypoint.lua I> assigned id 1 to replica 408619f4-c85d-49f6-812b-d0ddf426083b
-2019-07-21 13:44:13.689 [1] main/102/tarantool-entrypoint.lua I> recover from `/var/lib/tarantool/00000000000000000000.xlog'
-2019-07-21 13:44:13.690 [1] main/102/tarantool-entrypoint.lua I> done `/var/lib/tarantool/00000000000000000000.xlog'
-2019-07-21 13:44:13.691 [1] main/102/tarantool-entrypoint.lua I> recover from `/var/lib/tarantool/00000000000000000008.xlog'
-2019-07-21 13:44:13.692 [1] main/102/tarantool-entrypoint.lua recovery.cc:156 W> file `/var/lib/tarantool/00000000000000000008.xlog` wasn't correctly closed
-2019-07-21 13:44:13.693 [1] main/102/tarantool-entrypoint.lua I> recover from `/var/lib/tarantool/00000000000000000009.xlog'
-2019-07-21 13:44:13.693 [1] main/102/tarantool-entrypoint.lua I> done `/var/lib/tarantool/00000000000000000009.xlog'
-2019-07-21 13:44:13.694 [1] main/102/tarantool-entrypoint.lua I> recover from `/var/lib/tarantool/00000000000000000010.xlog'
-2019-07-21 13:44:13.695 [1] main/102/tarantool-entrypoint.lua I> done `/var/lib/tarantool/00000000000000000010.xlog'
-2019-07-21 13:44:13.711 [1] main/102/tarantool-entrypoint.lua I> ready to accept requests
-2019-07-21 13:44:13.711 [1] main/104/checkpoint_daemon I> scheduled next checkpoint for Sun Jul 21 14:51:17 2019
-2019-07-21 13:44:13.712 [1] main/102/tarantool-entrypoint.lua I> tcp_server: remove dead UNIX socket: /var/run/tarantool/tarantool.sock
-2019-07-21 13:44:13.712 [1] main/115/console/unix/:/var/run/tarantool I> started
-2019-07-21 13:44:13.713 [1] main/102/tarantool-entrypoint.lua I> db space got 0 records
-2019-07-21 13:44:13.718 [1] main/116/http/0.0.0.0:8080 I> started
-2019-07-21 13:44:13.718 [1] main C> entering the event loop
-2019-07-21 13:44:36.722 [1] main/117/http/172.19.0.1:60116 I> POST /kv
-2019-07-21 13:44:36.722 [1] main/117/http/172.19.0.1:60116 kvapp.lua:67 E> POST command with invalid body
-2019-07-21 13:44:58.312 [1] main/119/http/172.19.0.1:60118 I> POST /kv
-2019-07-21 13:44:58.313 [1] main/119/http/172.19.0.1:60118 kvapp.lua:79 W> POST command added record with key test0
-2019-07-21 13:45:26.481 [1] main/121/http/172.19.0.1:60120 I> POST /kv
-2019-07-21 13:45:26.482 [1] main/121/http/172.19.0.1:60120 server.lua:681 E> unhandled error: /opt/tarantool/kvapp.lua:72: attempt to concatenate global 'key' (a nil value)
-stack traceback:
-	/usr/local/share/lua/5.1/http/server.lua:679: in function 'process_client'
-	/usr/local/share/lua/5.1/http/server.lua:1117: in function </usr/local/share/lua/5.1/http/server.lua:1117>
-	[C]: in function 'pcall'
-	builtin/socket.lua:1073: in function <builtin/socket.lua:1071>
-request:
-POST /kv? HTTP/1.1
-Host: 127.0.0.1:8080
-Content-type: application/json
-Content-length: 162
-
-
-2019-07-21 13:45:47.879 [1] main C> got signal 15 - Terminated
-2019-07-21 13:47:28.049 [1] main/102/tarantool-entrypoint.lua C> Tarantool 2.2.0-482-g8c84932ad
-2019-07-21 13:47:28.049 [1] main/102/tarantool-entrypoint.lua C> log level 5
-2019-07-21 13:47:28.053 [1] main/102/tarantool-entrypoint.lua I> mapping 268435456 bytes for memtx tuple arena...
-2019-07-21 13:47:28.053 [1] main/102/tarantool-entrypoint.lua I> mapping 134217728 bytes for vinyl tuple arena...
-2019-07-21 13:47:28.054 [1] main/102/tarantool-entrypoint.lua I> instance uuid 408619f4-c85d-49f6-812b-d0ddf426083b
-2019-07-21 13:47:28.060 [1] main/102/tarantool-entrypoint.lua I> instance vclock {1: 12}
-2019-07-21 13:47:28.061 [1] iproto/101/main I> binary: bound to 0.0.0.0:3301
-2019-07-21 13:47:28.062 [1] main/102/tarantool-entrypoint.lua I> recovery start
-2019-07-21 13:47:28.062 [1] main/102/tarantool-entrypoint.lua I> recovering from `/var/lib/tarantool/00000000000000000000.snap'
-2019-07-21 13:47:28.064 [1] main/102/tarantool-entrypoint.lua I> cluster uuid 31d1a77f-5cd1-4dee-a19a-d8023ebe656f
-2019-07-21 13:47:28.074 [1] main/102/tarantool-entrypoint.lua I> assigned id 1 to replica 408619f4-c85d-49f6-812b-d0ddf426083b
-2019-07-21 13:47:28.076 [1] main/102/tarantool-entrypoint.lua I> recover from `/var/lib/tarantool/00000000000000000000.xlog'
-2019-07-21 13:47:28.076 [1] main/102/tarantool-entrypoint.lua I> done `/var/lib/tarantool/00000000000000000000.xlog'
-2019-07-21 13:47:28.078 [1] main/102/tarantool-entrypoint.lua I> recover from `/var/lib/tarantool/00000000000000000008.xlog'
-2019-07-21 13:47:28.078 [1] main/102/tarantool-entrypoint.lua recovery.cc:156 W> file `/var/lib/tarantool/00000000000000000008.xlog` wasn't correctly closed
-2019-07-21 13:47:28.079 [1] main/102/tarantool-entrypoint.lua I> recover from `/var/lib/tarantool/00000000000000000009.xlog'
-2019-07-21 13:47:28.080 [1] main/102/tarantool-entrypoint.lua I> done `/var/lib/tarantool/00000000000000000009.xlog'
-2019-07-21 13:47:28.081 [1] main/102/tarantool-entrypoint.lua I> recover from `/var/lib/tarantool/00000000000000000010.xlog'
-2019-07-21 13:47:28.081 [1] main/102/tarantool-entrypoint.lua I> done `/var/lib/tarantool/00000000000000000010.xlog'
-2019-07-21 13:47:28.082 [1] main/102/tarantool-entrypoint.lua I> recover from `/var/lib/tarantool/00000000000000000012.xlog'
-2019-07-21 13:47:28.082 [1] main/102/tarantool-entrypoint.lua I> done `/var/lib/tarantool/00000000000000000012.xlog'
-2019-07-21 13:47:28.092 [1] main/102/tarantool-entrypoint.lua I> ready to accept requests
-2019-07-21 13:47:28.092 [1] main/104/checkpoint_daemon I> scheduled next checkpoint for Sun Jul 21 15:00:10 2019
-2019-07-21 13:47:28.093 [1] main/102/tarantool-entrypoint.lua I> tcp_server: remove dead UNIX socket: /var/run/tarantool/tarantool.sock
-2019-07-21 13:47:28.093 [1] main/115/console/unix/:/var/run/tarantool I> started
-2019-07-21 13:47:28.093 [1] main/102/tarantool-entrypoint.lua I> db space got 1 records
-2019-07-21 13:47:28.096 [1] main/116/http/0.0.0.0:8080 I> started
-2019-07-21 13:47:28.096 [1] main C> entering the event loop
-2019-07-21 13:47:39.820 [1] main/117/http/172.19.0.1:60122 I> POST /kv
-2019-07-21 13:47:39.821 [1] main/117/http/172.19.0.1:60122 kvapp.lua:76 E> POST command with already existing key: test0
-2019-07-21 13:48:20.433 [1] main/119/http/172.19.0.1:60124 I> POST /kv
-2019-07-21 13:48:20.434 [1] main/119/http/172.19.0.1:60124 kvapp.lua:80 W> POST command added record with key test2
-2019-07-21 13:48:29.258 [1] main/121/http/172.19.0.1:60126 I> POST /kv
-2019-07-21 13:48:29.259 [1] main/121/http/172.19.0.1:60126 kvapp.lua:76 E> POST command with already existing key: test2
-2019-07-21 13:48:34.594 [1] main/122/http/172.19.0.1:60128 I> GET /kv
-2019-07-21 13:48:34.595 [1] main/122/http/172.19.0.1:60128 kvapp.lua:125 W> GET command returned all records
-2019-07-21 13:48:48.842 [1] main/123/http/172.19.0.1:60130 I> GET /kv/test2
-2019-07-21 13:48:48.843 [1] main/123/http/172.19.0.1:60130 kvapp.lua:119 W> GET command returned record with key test2
-2019-07-21 13:48:53.057 [1] main/124/http/172.19.0.1:60132 I> GET /kv/test3
-2019-07-21 13:48:53.058 [1] main/124/http/172.19.0.1:60132 kvapp.lua:116 E> GET command with unknown key: test3
-2019-07-21 13:49:11.768 [1] main C> got signal 15 - Terminated
-2019-07-21 13:50:31.558 [1] main/102/tarantool-entrypoint.lua C> Tarantool 2.2.0-482-g8c84932ad
-2019-07-21 13:50:31.558 [1] main/102/tarantool-entrypoint.lua C> log level 5
-2019-07-21 13:50:31.562 [1] main/102/tarantool-entrypoint.lua I> mapping 268435456 bytes for memtx tuple arena...
-2019-07-21 13:50:31.562 [1] main/102/tarantool-entrypoint.lua I> mapping 134217728 bytes for vinyl tuple arena...
-2019-07-21 13:50:31.563 [1] main/102/tarantool-entrypoint.lua I> instance uuid 408619f4-c85d-49f6-812b-d0ddf426083b
-2019-07-21 13:50:31.572 [1] main/102/tarantool-entrypoint.lua I> instance vclock {1: 14}
-2019-07-21 13:50:31.572 [1] iproto/101/main I> binary: bound to 0.0.0.0:3301
-2019-07-21 13:50:31.574 [1] main/102/tarantool-entrypoint.lua I> recovery start
-2019-07-21 13:50:31.574 [1] main/102/tarantool-entrypoint.lua I> recovering from `/var/lib/tarantool/00000000000000000000.snap'
-2019-07-21 13:50:31.576 [1] main/102/tarantool-entrypoint.lua I> cluster uuid 31d1a77f-5cd1-4dee-a19a-d8023ebe656f
-2019-07-21 13:50:31.586 [1] main/102/tarantool-entrypoint.lua I> assigned id 1 to replica 408619f4-c85d-49f6-812b-d0ddf426083b
-2019-07-21 13:50:31.588 [1] main/102/tarantool-entrypoint.lua I> recover from `/var/lib/tarantool/00000000000000000000.xlog'
-2019-07-21 13:50:31.588 [1] main/102/tarantool-entrypoint.lua I> done `/var/lib/tarantool/00000000000000000000.xlog'
-2019-07-21 13:50:31.590 [1] main/102/tarantool-entrypoint.lua I> recover from `/var/lib/tarantool/00000000000000000008.xlog'
-2019-07-21 13:50:31.591 [1] main/102/tarantool-entrypoint.lua recovery.cc:156 W> file `/var/lib/tarantool/00000000000000000008.xlog` wasn't correctly closed
-2019-07-21 13:50:31.592 [1] main/102/tarantool-entrypoint.lua I> recover from `/var/lib/tarantool/00000000000000000009.xlog'
-2019-07-21 13:50:31.592 [1] main/102/tarantool-entrypoint.lua I> done `/var/lib/tarantool/00000000000000000009.xlog'
-2019-07-21 13:50:31.594 [1] main/102/tarantool-entrypoint.lua I> recover from `/var/lib/tarantool/00000000000000000010.xlog'
-2019-07-21 13:50:31.594 [1] main/102/tarantool-entrypoint.lua I> done `/var/lib/tarantool/00000000000000000010.xlog'
-2019-07-21 13:50:31.595 [1] main/102/tarantool-entrypoint.lua I> recover from `/var/lib/tarantool/00000000000000000012.xlog'
-2019-07-21 13:50:31.595 [1] main/102/tarantool-entrypoint.lua I> done `/var/lib/tarantool/00000000000000000012.xlog'
-2019-07-21 13:50:31.596 [1] main/102/tarantool-entrypoint.lua I> recover from `/var/lib/tarantool/00000000000000000014.xlog'
-2019-07-21 13:50:31.596 [1] main/102/tarantool-entrypoint.lua I> done `/var/lib/tarantool/00000000000000000014.xlog'
-2019-07-21 13:50:31.609 [1] main/102/tarantool-entrypoint.lua I> ready to accept requests
-2019-07-21 13:50:31.609 [1] main/104/checkpoint_daemon I> scheduled next checkpoint for Sun Jul 21 14:56:46 2019
-2019-07-21 13:50:31.609 [1] main/102/tarantool-entrypoint.lua I> tcp_server: remove dead UNIX socket: /var/run/tarantool/tarantool.sock
-2019-07-21 13:50:31.609 [1] main/115/console/unix/:/var/run/tarantool I> started
-2019-07-21 13:50:31.610 [1] main/102/tarantool-entrypoint.lua I> db space got 2 records
-2019-07-21 13:50:31.612 [1] main/116/http/0.0.0.0:8080 I> started
-2019-07-21 13:50:31.612 [1] main C> entering the event loop
-2019-07-21 13:50:52.376 [1] main/117/http/172.19.0.1:60134 I> PATCH /kv/test3
-2019-07-21 13:50:52.377 [1] main/117/http/172.19.0.1:60134 kvapp.lua:39 E> Unknown REST command (with key - /kv/key): PATCH
-2019-07-21 13:51:09.214 [1] main/119/http/172.19.0.1:60136 I> PATCH /kv
-2019-07-21 13:51:09.215 [1] main/119/http/172.19.0.1:60136 kvapp.lua:56 E> Unknown REST command (without key - /kv): PATCH
-2019-07-21 13:51:24.950 [1] main/120/http/172.19.0.1:60138 I> POST /kv
-2019-07-21 13:51:24.950 [1] main/120/http/172.19.0.1:60138 kvapp.lua:76 E> POST command with already existing key: test2
-2019-07-21 13:51:35.039 [1] main/122/http/172.19.0.1:60140 I> GET /kv
-2019-07-21 13:51:35.039 [1] main/122/http/172.19.0.1:60140 kvapp.lua:125 W> GET command returned all records
-2019-07-21 13:51:39.676 [1] main/123/http/172.19.0.1:60142 I> GET /kv/tes2
-2019-07-21 13:51:39.677 [1] main/123/http/172.19.0.1:60142 kvapp.lua:116 E> GET command with unknown key: tes2
-2019-07-21 13:51:44.516 [1] main/124/http/172.19.0.1:60144 I> GET /kv/test2
-2019-07-21 13:51:44.517 [1] main/124/http/172.19.0.1:60144 kvapp.lua:119 W> GET command returned record with key: test2
-2019-07-21 13:52:17.242 [1] main/126/http/172.19.0.1:60146 I> PUT /kv/test2
-2019-07-21 13:52:17.243 [1] main/126/http/172.19.0.1:60146 kvapp.lua:91 E> PUT command with invalid body
-2019-07-21 13:52:23.065 [1] main/127/http/172.19.0.1:60148 I> PUT /kv/test2
-2019-07-21 13:52:23.065 [1] main/127/http/172.19.0.1:60148 kvapp.lua:91 E> PUT command with invalid body
-2019-07-21 13:52:31.081 [1] main/128/http/172.19.0.1:60150 I> PUT /kv/test2
-2019-07-21 13:52:31.081 [1] main/128/http/172.19.0.1:60150 kvapp.lua:104 W> PUT command changed record with key: test2
-2019-07-21 13:52:36.542 [1] main/130/http/172.19.0.1:60152 I> PUT /kv/test3
-2019-07-21 13:52:36.542 [1] main/130/http/172.19.0.1:60152 kvapp.lua:100 E> PUT command with unknown key: test3
-2019-07-21 13:52:53.777 [1] main/131/http/172.19.0.1:60154 I> DELETE /kv/test3
-2019-07-21 13:52:53.778 [1] main/131/http/172.19.0.1:60154 kvapp.lua:137 E> DELETE command with unknown key: test3
-2019-07-21 13:52:57.506 [1] main/132/http/172.19.0.1:60156 I> DELETE /kv/test2
-2019-07-21 13:52:57.506 [1] main/132/http/172.19.0.1:60156 kvapp.lua:141 W> DELETE command removed record with key: test2
-2019-07-21 13:54:12.869 [1] main C> got signal 15 - Terminated
-2019-07-21 13:54:16.795 [1] main/102/tarantool-entrypoint.lua C> Tarantool 2.2.0-482-g8c84932ad
-2019-07-21 13:54:16.796 [1] main/102/tarantool-entrypoint.lua C> log level 5
-2019-07-21 13:54:16.799 [1] main/102/tarantool-entrypoint.lua I> mapping 268435456 bytes for memtx tuple arena...
-2019-07-21 13:54:16.800 [1] main/102/tarantool-entrypoint.lua I> mapping 134217728 bytes for vinyl tuple arena...
-2019-07-21 13:54:16.801 [1] main/102/tarantool-entrypoint.lua I> instance uuid 408619f4-c85d-49f6-812b-d0ddf426083b
-2019-07-21 13:54:16.812 [1] main/102/tarantool-entrypoint.lua I> instance vclock {1: 17}
-2019-07-21 13:54:16.812 [1] iproto/101/main I> binary: bound to 0.0.0.0:3301
-2019-07-21 13:54:16.814 [1] main/102/tarantool-entrypoint.lua I> recovery start
-2019-07-21 13:54:16.814 [1] main/102/tarantool-entrypoint.lua I> recovering from `/var/lib/tarantool/00000000000000000000.snap'
-2019-07-21 13:54:16.815 [1] main/102/tarantool-entrypoint.lua I> cluster uuid 31d1a77f-5cd1-4dee-a19a-d8023ebe656f
-2019-07-21 13:54:16.825 [1] main/102/tarantool-entrypoint.lua I> assigned id 1 to replica 408619f4-c85d-49f6-812b-d0ddf426083b
-2019-07-21 13:54:16.827 [1] main/102/tarantool-entrypoint.lua I> recover from `/var/lib/tarantool/00000000000000000000.xlog'
-2019-07-21 13:54:16.827 [1] main/102/tarantool-entrypoint.lua I> done `/var/lib/tarantool/00000000000000000000.xlog'
-2019-07-21 13:54:16.829 [1] main/102/tarantool-entrypoint.lua I> recover from `/var/lib/tarantool/00000000000000000008.xlog'
-2019-07-21 13:54:16.829 [1] main/102/tarantool-entrypoint.lua recovery.cc:156 W> file `/var/lib/tarantool/00000000000000000008.xlog` wasn't correctly closed
-2019-07-21 13:54:16.830 [1] main/102/tarantool-entrypoint.lua I> recover from `/var/lib/tarantool/00000000000000000009.xlog'
-2019-07-21 13:54:16.830 [1] main/102/tarantool-entrypoint.lua I> done `/var/lib/tarantool/00000000000000000009.xlog'
-2019-07-21 13:54:16.831 [1] main/102/tarantool-entrypoint.lua I> recover from `/var/lib/tarantool/00000000000000000010.xlog'
-2019-07-21 13:54:16.831 [1] main/102/tarantool-entrypoint.lua I> done `/var/lib/tarantool/00000000000000000010.xlog'
-2019-07-21 13:54:16.832 [1] main/102/tarantool-entrypoint.lua I> recover from `/var/lib/tarantool/00000000000000000012.xlog'
-2019-07-21 13:54:16.832 [1] main/102/tarantool-entrypoint.lua I> done `/var/lib/tarantool/00000000000000000012.xlog'
-2019-07-21 13:54:16.833 [1] main/102/tarantool-entrypoint.lua I> recover from `/var/lib/tarantool/00000000000000000014.xlog'
-2019-07-21 13:54:16.833 [1] main/102/tarantool-entrypoint.lua I> done `/var/lib/tarantool/00000000000000000014.xlog'
-2019-07-21 13:54:16.834 [1] main/102/tarantool-entrypoint.lua I> recover from `/var/lib/tarantool/00000000000000000017.xlog'
-2019-07-21 13:54:16.834 [1] main/102/tarantool-entrypoint.lua I> done `/var/lib/tarantool/00000000000000000017.xlog'
-2019-07-21 13:54:16.846 [1] main/102/tarantool-entrypoint.lua I> ready to accept requests
-2019-07-21 13:54:16.846 [1] main/104/checkpoint_daemon I> scheduled next checkpoint for Sun Jul 21 15:52:00 2019
-2019-07-21 13:54:16.847 [1] main/102/tarantool-entrypoint.lua I> tcp_server: remove dead UNIX socket: /var/run/tarantool/tarantool.sock
-2019-07-21 13:54:16.847 [1] main/115/console/unix/:/var/run/tarantool I> started
-2019-07-21 13:54:16.847 [1] main/102/tarantool-entrypoint.lua I> db space got 1 records
-2019-07-21 13:54:16.850 [1] main/116/http/0.0.0.0:8080 I> started
-2019-07-21 13:54:16.850 [1] main C> entering the event loop
-2019-07-21 13:54:22.458 [1] main/117/http/172.19.0.1:60158 I> GET /kv/test2
-2019-07-21 13:54:22.458 [1] main/117/http/172.19.0.1:60158 kvapp.lua:116 E> GET command with unknown key: test2
-2019-07-21 13:54:25.789 [1] main/118/http/172.19.0.1:60160 I> GET /kv
-2019-07-21 13:54:25.789 [1] main/118/http/172.19.0.1:60160 kvapp.lua:125 W> GET command returned all records
-2019-07-21 13:54:30.727 [1] main C> got signal 15 - Terminated
+2019-07-21 14:02:23.963 [1] main/102/tarantool-entrypoint.lua C> Tarantool 2.2.0-482-g8c84932ad
+2019-07-21 14:02:23.963 [1] main/102/tarantool-entrypoint.lua C> log level 5
+2019-07-21 14:02:23.965 [1] main/102/tarantool-entrypoint.lua I> mapping 268435456 bytes for memtx tuple arena...
+2019-07-21 14:02:23.965 [1] main/102/tarantool-entrypoint.lua I> mapping 134217728 bytes for vinyl tuple arena...
+2019-07-21 14:02:23.966 [1] main/102/tarantool-entrypoint.lua I> instance uuid 6f7a65f8-caa8-41bc-8e0e-8180fdfaf9ee
+2019-07-21 14:02:23.966 [1] iproto/101/main I> binary: bound to 0.0.0.0:3301
+2019-07-21 14:02:23.967 [1] main/102/tarantool-entrypoint.lua I> initializing an empty data directory
+2019-07-21 14:02:23.979 [1] main/102/tarantool-entrypoint.lua I> assigned id 1 to replica 6f7a65f8-caa8-41bc-8e0e-8180fdfaf9ee
+2019-07-21 14:02:23.979 [1] main/102/tarantool-entrypoint.lua I> cluster uuid 2d5048d6-adbf-41b2-a822-cadd5b9efc17
+2019-07-21 14:02:23.982 [1] snapshot/101/main I> saving snapshot `/var/lib/tarantool/00000000000000000000.snap.inprogress'
+2019-07-21 14:02:24.012 [1] snapshot/101/main I> done
+2019-07-21 14:02:24.014 [1] main/102/tarantool-entrypoint.lua I> ready to accept requests
+2019-07-21 14:02:24.014 [1] main/104/checkpoint_daemon I> scheduled next checkpoint for Sun Jul 21 15:44:00 2019
+2019-07-21 14:02:24.022 [1] main/102/tarantool-entrypoint.lua I> Initializing database
+2019-07-21 14:02:24.022 [1] main/102/tarantool-entrypoint.lua tarantool-entrypoint.lua:119 W> 
+****************************************************
+WARNING: 'guest' is chosen as primary user.
+         Since it is not allowed to set a password for
+         guest user, your instance will be accessible
+         by anyone having direct access to the Tarantool
+         port.
+         If you wanted to create an authenticated user,
+         specify "-e TARANTOOL_USER_NAME=username" and
+         pick a user name other than "guest".
+****************************************************
+2019-07-21 14:02:24.022 [1] main/102/tarantool-entrypoint.lua I> Granting admin privileges to user 'guest'
+2019-07-21 14:02:24.024 [1] main/115/console/unix/:/var/run/tarantool I> started
+2019-07-21 14:02:24.028 [1] main/102/tarantool-entrypoint.lua I> db space created
+2019-07-21 14:02:24.029 [1] main/102/tarantool-entrypoint.lua I> db space primary index created
+2019-07-21 14:02:24.029 [1] main/102/tarantool-entrypoint.lua I> db space got 0 records
+2019-07-21 14:02:24.034 [1] main/116/http/0.0.0.0:8080 I> started
+2019-07-21 14:02:24.034 [1] main C> entering the event loop
+2019-07-21 14:03:16.057 [1] main/118/http/172.20.0.1:39954 I> GET /kv
+2019-07-21 14:03:16.057 [1] main/118/http/172.20.0.1:39954 kvapp.lua:127 W> GET command returned all records
+2019-07-21 14:03:31.727 [1] main/120/http/172.20.0.1:39956 I> POST /kv
+2019-07-21 14:03:31.727 [1] main/120/http/172.20.0.1:39956 kvapp.lua:68 E> POST command with invalid body
+2019-07-21 14:03:37.352 [1] main/121/http/172.20.0.1:39958 I> POST /kv
+2019-07-21 14:03:37.352 [1] main/121/http/172.20.0.1:39958 kvapp.lua:68 E> POST command with invalid body
+2019-07-21 14:03:42.157 [1] main/122/http/172.20.0.1:39960 I> POST /kv
+2019-07-21 14:03:42.157 [1] main/122/http/172.20.0.1:39960 kvapp.lua:68 E> POST command with invalid body
+2019-07-21 14:03:46.337 [1] main/123/http/172.20.0.1:39962 I> POST /kv
+2019-07-21 14:03:46.339 [1] main/123/http/172.20.0.1:39962 kvapp.lua:81 W> POST command added record with key: test
+2019-07-21 14:03:48.986 [1] main/124/http/172.20.0.1:39964 I> POST /kv
+2019-07-21 14:03:48.986 [1] main/124/http/172.20.0.1:39964 kvapp.lua:77 E> POST command with already existing key: test
+2019-07-21 14:03:58.075 [1] main/126/http/172.20.0.1:39966 I> POST /kv
+2019-07-21 14:03:58.077 [1] main/126/http/172.20.0.1:39966 kvapp.lua:81 W> POST command added record with key: test2
+2019-07-21 14:04:02.678 [1] main/127/http/172.20.0.1:39968 I> GET /kv
+2019-07-21 14:04:02.678 [1] main/127/http/172.20.0.1:39968 kvapp.lua:127 W> GET command returned all records
+2019-07-21 14:04:10.610 [1] main/128/http/172.20.0.1:39970 I> GET /kv/test
+2019-07-21 14:04:10.610 [1] main/128/http/172.20.0.1:39970 kvapp.lua:120 W> GET command returned record with key: test
+2019-07-21 14:04:13.132 [1] main/129/http/172.20.0.1:39972 I> GET /kv/test2
+2019-07-21 14:04:13.133 [1] main/129/http/172.20.0.1:39972 kvapp.lua:120 W> GET command returned record with key: test2
+2019-07-21 14:04:16.446 [1] main/130/http/172.20.0.1:39974 I> GET /kv/test3
+2019-07-21 14:04:16.447 [1] main/130/http/172.20.0.1:39974 kvapp.lua:117 E> GET command with unknown key: test3
+2019-07-21 14:04:32.040 [1] main/132/http/172.20.0.1:39976 I> PUT /kv/test
+2019-07-21 14:04:32.040 [1] main/132/http/172.20.0.1:39976 kvapp.lua:92 E> PUT command with invalid body
+2019-07-21 14:04:39.081 [1] main/133/http/172.20.0.1:39978 I> PUT /kv/test
+2019-07-21 14:04:39.082 [1] main/133/http/172.20.0.1:39978 kvapp.lua:92 E> PUT command with invalid body
+2019-07-21 14:04:47.551 [1] main/134/http/172.20.0.1:39980 I> PUT /kv/test
+2019-07-21 14:04:47.552 [1] main/134/http/172.20.0.1:39980 kvapp.lua:105 W> PUT command changed record with key: test
+2019-07-21 14:04:54.354 [1] main/135/http/172.20.0.1:39982 I> PUT /kv/test3
+2019-07-21 14:04:54.355 [1] main/135/http/172.20.0.1:39982 kvapp.lua:101 E> PUT command with unknown key: test3
+2019-07-21 14:05:04.394 [1] main/137/http/172.20.0.1:39984 I> DELETE /kv/test3
+2019-07-21 14:05:04.394 [1] main/137/http/172.20.0.1:39984 kvapp.lua:139 E> DELETE command with unknown key: test3
+2019-07-21 14:05:07.243 [1] main/138/http/172.20.0.1:39986 I> DELETE /kv/test
+2019-07-21 14:05:07.244 [1] main/138/http/172.20.0.1:39986 kvapp.lua:143 W> DELETE command removed record with key: test
+2019-07-21 14:05:12.833 [1] main/139/http/172.20.0.1:39988 I> GET /kv/test
+2019-07-21 14:05:12.833 [1] main/139/http/172.20.0.1:39988 kvapp.lua:117 E> GET command with unknown key: test
+2019-07-21 14:05:16.606 [1] main/140/http/172.20.0.1:39990 I> GET /kv
+2019-07-21 14:05:16.606 [1] main/140/http/172.20.0.1:39990 kvapp.lua:127 W> GET command returned all records
