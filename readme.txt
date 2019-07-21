@@ -21,5 +21,34 @@ docker-compose.yml <f:/tarantool/tarantool_kvstorage> - instead put your path he
 
 5. call 'docker-compose up' in this folder to run this thing
 
+6. interface: POST /kv, PUT /kv/key, GET /kv, GET /kv/key, DELETE /kv/key
 
+7. Valid POST body
+{
+  "body":
+  {
+   "key": "test2",
+    "value":
+    {
+      "DDDDD": "2dd2222",
+      "AAAAA": "wwwweee",
+      "VVVV": 0.0,
+      "GGGGG": 66
+    }
+  }
+}
 
+8. Valid PUT body
+
+{
+  "body":
+  {
+    "value":
+    {
+      "DDDDD": "2dd2222",
+      "AAAAA": "wwwweee",
+      "VVVV": 0.0,
+      "GGGGG": 66
+    }
+  }
+}
