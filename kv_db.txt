@@ -68,3 +68,4 @@ WARNING: 'guest' is chosen as primary user.
 2019-07-21 14:05:12.833 [1] main/139/http/172.20.0.1:39988 kvapp.lua:117 E> GET command with unknown key: test
 2019-07-21 14:05:16.606 [1] main/140/http/172.20.0.1:39990 I> GET /kv
 2019-07-21 14:05:16.606 [1] main/140/http/172.20.0.1:39990 kvapp.lua:127 W> GET command returned all records
+2019-07-21 14:07:44.913 [1] main C> got signal 15 - Terminated
